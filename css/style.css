@@ -1,0 +1,358 @@
+:root {
+    --main-bg-color: #EBF2FA;
+    --main-text-color: #1A2837;
+    --h1-color: #E56B6F;
+    --h2-color: #6D597A;
+    --icons-color: #355070;
+}
+
+* {
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+
+    color: var(--main-text-color, black);
+
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a.anchor#a-video,
+a.anchor#a-top,
+a.anchor#a-gallery {
+    display: block;
+    position: relative;
+    top: -50px;
+    visibility: hidden;
+}
+
+a.anchor#a-top {
+    top: -100px;
+}
+
+li {
+    list-style: none;
+}
+
+nav#top-bar {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+
+    align-items: center;
+
+    position: fixed;
+
+    background-color: var(--icons-color, #355070);
+
+    width: 100%;
+    height: 70px;
+}
+
+nav#top-bar ul {
+    padding-left: 2%;
+}
+
+
+nav#top-bar h1 {
+    margin: 0;
+    color: var(--main-bg-color, rgb(207, 232, 252));
+    transition-duration: 0.3s;
+}
+
+nav#top-bar h1:hover {
+    color: var(--h1-color, #E56B6F);
+}
+
+nav#top-bar h1:active {
+    color: var(--h2-color, #6D597A);
+}
+
+nav#right-bar {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+    width: 150px;
+
+    position: fixed;
+
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    align-items: center;
+    text-align: center;
+
+    background-color: var(--icons-color, #355070);
+}
+
+nav#right-bar ul {
+    padding: 0;
+    width: 100%;
+}
+
+nav#right-bar ul * {
+    color: var(--main-bg-color, white);
+}
+
+nav#right-bar li {
+    padding: 20% 0;
+}
+
+nav#right-bar li:hover {
+    background-color: var(--h1-color, #E56B6F);
+}
+
+nav#right-bar li:active {
+    background-color: var(--icons-color, #355070);
+}
+
+nav#bottom-bar a {
+    display: flex;
+
+    width: 56px;
+    height: 56px;
+
+    border: 3px solid var(--h1-color, #E56B6F);
+    border-radius: 50%;
+    overflow: hidden;
+
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+
+    right: 48px;
+    bottom: 48px;
+
+    background-color: var(--main-bg-color, white);
+}
+
+nav#bottom-bar span {
+    color: var(--h1-color, #E56B6F);
+    font-weight: 900;
+}
+
+nav#bottom-bar a:hover {
+    border: 5px solid var(--h2-color, #6D597A);
+}
+
+nav#bottom-bar a:active {
+    border: 5px solid var(--icons-color, #355070);
+}
+
+body {
+    background-color: var(--main-bg-color, white);
+}
+
+body>main {
+    padding: 100px 2% 2% 2%;
+}
+
+article main,
+article header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    justify-content: center;
+}
+
+h1 {
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 48px;
+
+    color: var(--h1-color, #E56B6F);
+
+    margin: 2rem 0 1rem 0;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 900;
+
+    color: var(--h2-color, #6D597A);
+
+    margin-bottom: 2rem;
+}
+
+article main h1,
+article main h2 {
+    text-align: center;
+}
+
+article header h1 {
+    margin-top: 0;
+}
+
+article main h1.gallery {
+    position: sticky;
+    top: 5px;
+}
+
+article header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    gap: 3%;
+}
+
+.description {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+    justify-content: center;
+
+    max-width: 400px;
+}
+
+.avatar-container {
+    border-radius: 50%;
+    border: 10px solid var(--h1-color, #E56B6F);
+
+    overflow: hidden;
+
+    width: 300px;
+    height: 300px;
+}
+
+.avatar-container .avatar {
+    background-image: url("../img/dd-kittisaurus-avatar.jpg");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    background-size: 200%;
+
+    width: 100%;
+    height: 100%;
+}
+
+#video {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    justify-content: center;
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+
+    gap: 8px;
+
+    width: calc(100vw - 10%);
+    min-height: 4000px;
+}
+
+#gallery .galleryItem {
+    width: 100%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+#gallery .galleryItem#i0 {
+    background-image: url("../img/dd-kittisaurus-01.jpg");
+}
+
+#gallery .galleryItem#i1 {
+    background-image: url("../img/dd-kittisaurus-02.jpg");
+    background-position: 60% 50%;
+}
+
+#gallery .galleryItem#i2 {
+    background-image: url("../img/dd-kittisaurus-03.gif");
+    background-position: 50% 30%;
+}
+
+#gallery .galleryItem#i3 {
+    background-image: url("../img/dd-kittisaurus-04.jpg");
+}
+
+#gallery .galleryItem#i4 {
+    background-image: url("../img/dd-kittisaurus-05.jpg");
+    background-position: 60% 50%;
+}
+
+#gallery .galleryItem#i5 {
+    background-image: url("../img/dd-kittisaurus-06.jpg");
+    background-position: top;
+}
+
+#gallery .galleryItem#i6 {
+    background-image: url("../img/dd-kittisaurus-07.jpg");
+}
+
+#gallery .galleryItem#i7 {
+    background-image: url("../img/dd-kittisaurus-08.png");
+    background-position: 50% 10%;
+}
+
+#gallery .galleryItem#i8 {
+    background-image: url("../img/dd-kittisaurus-09.png");
+}
+
+#gallery .galleryItem#i9 {
+    background-image: url("../img/dd-kittisaurus-10.jpg");
+}
+
+#gallery .galleryItem#i10 {
+    background-image: url("../img/dd-kittisaurus-11.jpg");
+}
+
+#gallery .galleryItem#i11 {
+    background-image: url("../img/dd-kittisaurus-12.jpg");
+    background-position: 60% 50%;
+}
+
+#gallery .galleryItem#i12 {
+    background-image: url("../img/dd-kittisaurus-13.jpg");
+}
+
+#gallery .galleryItem#i13 {
+    background-image: url("../img/dd-kittisaurus-14.jpg");
+    background-position: 60% 30%;
+}
+
+#gallery .galleryItem#i14 {
+    background-image: url("../img/dd-kittisaurus-15.gif");
+    background-position: 60% 50%;
+}
+
+#gallery .galleryItem#i15 {
+    background-image: url("../img/dd-kittisaurus-16.gif");
+}
+
+#gallery .galleryItem#i16 {
+    background-image: url("../img/dd-kittisaurus-17.gif");
+    background-position: 50% 30%;
+}
+
+#gallery .galleryItem#i17 {
+    background-image: url("../img/dd-kittisaurus-18.gif");
+    background-position: 53% 50%;
+}
+
+#gallery .galleryItem#i18 {
+    background-image: url("../img/dd-kittisaurus-19.gif");
+}
+
+#gallery .galleryItem#i19 {
+    background-image: url("../img/dd-kittisaurus-20.gif");
+}
+
+#gallery .galleryItem#i20 {
+    background-image: url("../img/dd-kittisaurus-21.gif");
+    background-position: top;
+}

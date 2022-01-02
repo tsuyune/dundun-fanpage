@@ -1,1 +1,1 @@
-[GitHub Pages](https://toshiteshigure.github.io/dundun-fanpage/)
+[GitHub Pages](https://tsuyune.github.io/dundun-fanpage/)
